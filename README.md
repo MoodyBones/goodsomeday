@@ -268,8 +268,8 @@ Visual learner • Frontend developer • Accessibility advocate
 
 - GitHub: [@MoodyBones](https://github.com/MoodyBones)
 - Project: [goodsomeday](https://github.com/MoodyBones/goodsomeday)
-- LinkedIn: [Connect with me](#)
-- Twitter: [@yourusername](#)
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/mel-jones-4a5835182/)
+- Substack: [@m00dy](https://substack.com/@m00dy)
 
 ---
 
@@ -289,7 +289,7 @@ I'm building this project in public and documenting a non-traditional path to fu
 - ⭐ Star this repo to follow the journey
 - 📖 Read the [learning docs](docs/learning-journey/)
 - 💬 Ask questions in Issues
-- 🐦 Follow updates on [Twitter/LinkedIn]
+- 🐦 Follow updates on [LinkedIn/Substack]
 
 **Let's build the future where tools adapt to humans, not the other way around.** 🚀
 
