@@ -1,8 +1,8 @@
 # Goodsomeday
 
-A platform for sharing career journey stories - built while learning full-stack development from scratch.
+A platform for sharing career journey stories - built while learning **visual-first, AI-assisted full-stack development**.
 
-> **📚 This is a learning project.** I'm documenting my journey from frontend developer to full-stack, building real infrastructure and automation along the way.
+> **📚 This is a learning project.** I'm a visual learner and frontend developer exploring modern tools (n8n, Claude Code, Figma MCP) that let me build complete products without losing my soul to traditional backend development.
 
 [![Live Demo](https://img.shields.io/badge/demo-live-success)](https://goodsomeday.vercel.app) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -11,51 +11,107 @@ A platform for sharing career journey stories - built while learning full-stack 
 
 ## 🎯 What is Goodsomeday?
 
-Goodsomeday is a platform where people can share their career journey stories - the challenges, pivots, and lessons learned at different stages of their professional path. Stories are categorized by "leaky pipeline" stages:
+Goodsomeday is a platform where people can share their career journey stories - the challenges, pivots, and lessons learned at different stages of their professional path.
 
+**Inspired by:** Australia's recent [Leaky Pipeline Report](https://www.vic.gov.au/leaky-tech-pipeline-report) showing where we lose women in tech careers.
+
+**Stories are categorized by stage:**
 - **High School** - Early career decisions and first steps
 - **University** - Academic and early professional experiences  
 - **Mid-Career** - Transitions, growth, and pivots
 
-The platform focuses on authentic stories that help others navigate similar journeys.
+The platform focuses on authentic stories that help others navigate similar journeys, with an emphasis on accessibility and inclusive design.
 
 ---
 
 ## 🚀 Tech Stack
 
-**Frontend:**
+**Frontend** *(My Comfort Zone)*
 - [Next.js 14](https://nextjs.org/) - React framework with App Router
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first styling
 - [Lucide React](https://lucide.dev/) - Icons
+- Focus: Beautiful, accessible interfaces for ALL users
 
-**Backend & Infrastructure:**
-- [n8n](https://n8n.io/) - Workflow automation (self-hosted)
-- [PostgreSQL](https://www.postgresql.org/) - Database
+**Backend** *(Visual & AI-Assisted)*
+- [n8n](https://n8n.io/) - Visual workflow automation (no Express.js!)
+- [PostgreSQL](https://www.postgresql.org/) - Database (accessed via n8n nodes)
+- Visual drag-and-drop logic instead of hand-coded APIs
+
+**Infrastructure**
 - [DigitalOcean](https://www.digitalocean.com/) - VPS hosting
 - [Nginx](https://nginx.org/) - Reverse proxy
 
-**Automation & Tools:**
-- [Linear](https://linear.app/) - Project management
-- [Figma](https://figma.com/) - Design system
-- [Claude API](https://www.anthropic.com/) - Release notes generation
-- [GitHub Actions](https://github.com/features/actions) - CI/CD
+**AI & Automation**
+- [Claude Code](https://docs.anthropic.com/claude/docs/claude-code) - AI-assisted component generation
+- [Claude API](https://www.anthropic.com/) - Automated release notes
+- [Figma MCP](https://www.figma.com/) - Design-to-code integration (future goal)
+
+**Tools & Workflow**
+- [Linear](https://linear.app/) - Project management with learning documentation
+- [Figma](https://figma.com/) - Design system and component library
+- [GitHub](https://github.com/) - Version control with PR workflow
 
 ---
 
 ## 📖 Learning Journey
 
-This project exists to document my learning journey from frontend development to full-stack infrastructure. Each feature includes detailed learning notes about what I built and what I learned building it.
+**This project exists to answer a question:** Can a visual learner who loves frontend development build complete products using modern AI and no-code tools - without becoming a traditional backend developer?
 
-**Skills I'm Learning:**
-- Backend development (APIs, databases, servers)
-- DevOps (VPS management, deployment, automation)
-- Workflow automation (n8n)
-- Database design (PostgreSQL)
-- System architecture
-- Release automation
+### The Approach
 
-**Tracking My Progress:**
+I'm not learning "full-stack" the traditional way. I'm learning **visual-first, AI-assisted full-stack**:
+
+**What I'm Using:**
+- 🎨 **n8n** for backend logic (drag-and-drop workflows, not Express.js)
+- 🤖 **Claude Code** for component generation (review, don't write from scratch)
+- 📐 **Figma MCP** for design-to-code (the real end goal)
+
+**What I'm NOT Doing:**
+- ❌ Hand-coding CRUD APIs
+- ❌ Writing raw SQL queries
+- ❌ Becoming a database optimization expert
+- ❌ Spending months on traditional backend learning
+
+**What I AM Doing:**
+- ✅ Using visual tools that match how I think
+- ✅ Letting AI handle boilerplate I don't want to write
+- ✅ Focusing on beautiful, accessible frontends
+- ✅ Building toward design system automation
+- ✅ Shipping a product that helps people
+
+### Why This Matters
+
+**I care about:**
+- Beautiful, accessible interfaces
+- Equality and fair work in tech  
+- Design systems and collaboration
+- Making technology approachable for everyone
+
+**I don't care about:**
+- Writing server boilerplate manually
+- SQL optimization minutiae
+- Pretending to love what I don't
+
+The future isn't "everyone becomes a traditional full-stack developer." It's "use modern tools to build on your unique strengths."
+
+### Skills I'm Developing
+
+**Technical:**
+- Visual workflow design (n8n)
+- AI-assisted development (Claude Code)
+- Backend concepts (without drowning in syntax)
+- Design-to-code integration (Figma MCP)
+- Infrastructure basics (just enough to be dangerous)
+
+**Professional:**
+- Building in public
+- Systematic learning documentation
+- Git workflow best practices
+- Strategic tool selection
+- Learning efficiency over mastery
+
+**Track My Progress:**
 - [Changelog](docs/CHANGELOG.md) - What's been built
 - [Learning Journey](docs/learning-journey/) - What I learned building each feature
 - [Architecture](docs/ARCHITECTURE.md) - How it all fits together
@@ -65,19 +121,24 @@ This project exists to document my learning journey from frontend development to
 ## ✨ Features
 
 **Current (MVP):**
-- ✅ Story submission with validation
+- ✅ Story submission with visual validation (n8n workflow)
 - ✅ Story feed with filtering by pipeline stage
-- ✅ Light/dark theme system
+- ✅ Light/dark theme system (accessible color contrast)
 - ✅ Admin moderation panel
-- ✅ Automated release notes
+- ✅ Automated release notes (Claude API)
+
+**In Progress:**
+- 🔄 Visual backend workflows (replacing traditional API code)
+- 🔄 AI-generated components (Claude Code + Figma specs)
+- 🔄 Accessibility-first design system
 
 **Planned (v2.0+):**
-- Comments on stories
-- User authentication
-- Story reactions/likes
-- Search functionality
-- Email notifications
-- RSS feed
+- 📋 Figma MCP integration (design → code automation)
+- 📋 Design system documentation generator
+- 📋 Comments on stories
+- 📋 User authentication
+- 📋 Story reactions/likes
+- 📋 Search functionality
 
 ---
 
@@ -191,32 +252,47 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
+- **Australia's Leaky Pipeline Report** - The inspiration for this project
 - **Josh Comeau** - Dark mode implementation patterns
-- **n8n Community** - Workflow automation inspiration
+- **n8n Community** - Visual workflow automation inspiration
+- **Anthropic** - Claude Code and API for AI-assisted development
 - **Linear** - Amazing project management tool
-- **The Dev Community** - For all the learning resources
+- **The Visual Learning Community** - For showing there are many paths to building
 
 ---
 
 ## 📧 Contact
 
-**Mel Jones** (MoodyBones)
+**Mel Jones** (MoodyBones)  
+Visual learner • Frontend developer • Accessibility advocate
+
 - GitHub: [@MoodyBones](https://github.com/MoodyBones)
-- Project Link: [https://github.com/MoodyBones/goodsomeday](https://github.com/MoodyBones/goodsomeday)
+- Project: [goodsomeday](https://github.com/MoodyBones/goodsomeday)
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/mel-jones-4a5835182/)
+- Substack: [@m00dy](https://substack.com/@m00dy)
 
 ---
 
-## 🌟 Learning in Public
+## 🌟 Building a Different Way
 
-I'm building this project in public and documenting everything I learn. If you're also learning full-stack development, feel free to:
+I'm building this project in public and documenting a non-traditional path to full-stack development.
 
-- ⭐ Star this repo to follow along
-- 📖 Read the [learning journey docs](docs/learning-journey/)
+**If you're:**
+- A visual learner
+- Frontend-focused but need backend capabilities
+- Interested in AI-assisted development
+- Exploring n8n or Figma MCP
+- Building on your unique strengths
+
+**Follow along!**
+
+- ⭐ Star this repo to follow the journey
+- 📖 Read the [learning docs](docs/learning-journey/)
 - 💬 Ask questions in Issues
-- 🐦 Follow my progress on [Twitter/X](https://twitter.com/yourusername)
+- 🐦 Follow updates on [LinkedIn/Substack]
 
-**Let's learn together!** 🚀
+**Let's build the future where tools adapt to humans, not the other way around.** 🚀
 
 ---
 
-Built with ❤️ and lots of learning by [MoodyBones](https://github.com/MoodyBones)
+Built with ❤️, visual thinking, and AI assistance by [MoodyBones](https://github.com/MoodyBones)
