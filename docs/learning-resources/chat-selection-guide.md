@@ -2,6 +2,7 @@
 
 | Situation | Chat Template | Key Focus |
 | --- | --- | --- |
+| **START EVERY SESSION** | **#14 Claude Code Context Primer** | **Front-load context FIRST** |
 | **Daily Learning & Development** |  |  |
 | Reviewing concepts from conversation | #1 FigJam Coaching | Visual mapping, dual coding |
 | End of week reflection | #2 Weekly Summary | Progress tracking, planning ahead |
@@ -67,6 +68,10 @@ Need help with well-being?
 ---
 
 ## Usage Frequency Guide
+
+**ALWAYS (every session):**
+
+- **#14 Claude Code Context Primer** - Copy-paste at START of EVERY new Claude Code chat
 
 **Daily (as needed):**
 

@@ -11,16 +11,27 @@ A platform for sharing career journey stories - built while learning **visual-fi
 
 ## 🎯 What is Goodsomeday?
 
-Goodsomeday is a platform where people can share their career journey stories - the challenges, pivots, and lessons learned at different stages of their professional path.
+Goodsomeday is a platform for sharing transformative career journey stories - moments when people faced barriers in tech, reflected on their experiences, and took action that led to meaningful change.
 
 **Inspired by:** Australia's recent [Leaky Pipeline Report](https://www.vic.gov.au/leaky-tech-pipeline-report) showing where we lose women in tech careers.
 
-**Stories are categorized by stage:**
-- **High School** - Early career decisions and first steps
-- **University** - Academic and early professional experiences  
-- **Mid-Career** - Transitions, growth, and pivots
+### The Story Format: From Barrier to Action
 
-The platform focuses on authentic stories that help others navigate similar journeys, with an emphasis on accessibility and inclusive design.
+Stories on Goodsomeday follow a narrative arc designed to move from victimhood to empowerment:
+
+1. **What happened** - The negative experience or barrier (burnout, discrimination, imposter syndrome, lack of support)
+2. **Reflection** - How it made them think, what they realized about themselves or the system
+3. **Action** - What they did about it (changed environments, set boundaries, found community, left tech, advocated for change)
+4. **Transformation** - How they've grown and what changed as a result
+
+**Stories are categorized by when they left (or almost left) the pipeline:**
+- **Student** - Barriers during education (high school, university)
+- **Early Career** - First 0-5 years in the industry
+- **Mid-Career** - 5+ years, experienced professionals
+
+**The goal:** Help others see that hope comes from action and change. Whether someone stayed in tech with new boundaries, found fulfillment elsewhere, or is still figuring it out - every story shows a path forward.
+
+The platform focuses on authentic, structured storytelling with an emphasis on accessibility and inclusive design.
 
 ---
 
@@ -39,7 +50,7 @@ The platform focuses on authentic stories that help others navigate similar jour
 - Visual drag-and-drop logic instead of hand-coded APIs
 
 **Infrastructure**
-- [DigitalOcean](https://www.digitalocean.com/) - VPS hosting
+- [Hostinger](https://www.hostinger.com/) - VPS hosting
 - [Nginx](https://nginx.org/) - Reverse proxy
 
 **AI & Automation**
@@ -113,7 +124,7 @@ The future isn't "everyone becomes a traditional full-stack developer." It's "us
 
 **Track My Progress:**
 - [Changelog](docs/CHANGELOG.md) - What's been built
-- [Learning Journey](docs/learning-journey/) - What I learned building each feature
+- [Learning Resources](docs/learning-resources/) - What I learned building each feature
 - [Architecture](docs/ARCHITECTURE.md) - How it all fits together
 
 ---
@@ -201,7 +212,7 @@ goodsomeday/
 │   └── types/              # TypeScript type definitions
 ├── docs/
 │   ├── api/                # API documentation
-│   ├── learning-journey/   # Learning documentation
+│   ├── learning-resources/ # Learning documentation
 │   └── ARCHITECTURE.md     # System architecture
 └── public/                 # Static assets
 ```
@@ -222,8 +233,8 @@ Full API documentation: [docs/api/README.md](docs/api/README.md)
 
 ## 🚢 Deployment
 
-**Frontend:** Deployed on [Vercel](https://vercel.com/)  
-**Backend:** Self-hosted on DigitalOcean VPS
+**Frontend:** Deployed on [Vercel](https://vercel.com/)
+**Backend:** Self-hosted on Hostinger VPS
 
 See [docs/SETUP.md](docs/SETUP.md) for complete deployment instructions.
 
@@ -287,7 +298,7 @@ I'm building this project in public and documenting a non-traditional path to fu
 **Follow along!**
 
 - ⭐ Star this repo to follow the journey
-- 📖 Read the [learning docs](docs/learning-journey/)
+- 📖 Read the [learning docs](docs/learning-resources/)
 - 💬 Ask questions in Issues
 - 🐦 Follow updates on [LinkedIn/Substack]
 
