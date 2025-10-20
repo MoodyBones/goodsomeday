@@ -44,13 +44,6 @@ I''m still figuring it out. Some days are harder than others. But I learned that
     'still_navigating',
     TRUE,
     CURRENT_TIMESTAMP - INTERVAL '1 day'
-),
-(
-    'This story is waiting for moderation. It should not appear in the public feed yet.',
-    'student',
-    NULL,
-    FALSE,
-    CURRENT_TIMESTAMP - INTERVAL '3 hours'
 );
 
 -- ============================================================================
