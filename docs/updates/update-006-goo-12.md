@@ -70,7 +70,21 @@ Schema is live. n8n workflows can now connect to it.
 
 **One learning:** Database design isn't just technical - it's product strategy encoded in SQL. Every field, every constraint, every index tells a story about what you're building and who it's for. Get clear on the vision before you write `CREATE TABLE`.
 
-**One struggle:** Initially tried to SSH and run commands without re-reading the project philosophy. Claude Code (rightfully) called me out. Needed to understand the *whole* project - the README, the schema philosophy doc, all the GitHub issues - before executing. Technical work without product context is just typing.
+**One struggle (AI context):** Claude Code jumped into execution without understanding project context. Started trying to SSH and run commands manually, explaining PostgreSQL step-by-step like a tutorial. Had to stop and say: "Have you read the README? The schema philosophy? The commit history? Do you understand this project?"
+
+**What went wrong:**
+- Claude didn't read commit history (missed 3 commits from Day 1 with 2,250+ lines already done)
+- Claude assumed "help with GOO-12" meant "start from scratch" not "finish what's started"
+- Claude assumed I wanted step-by-step PostgreSQL tutorials (I don't - I want tools to abstract that away)
+- Claude didn't understand my AI-assisted approach (use n8n, not hand-code; minimal SQL, not mastery)
+
+**What I learned about prompting AI:**
+1. **Front-load context at START of every session** - Don't assume Claude remembers or knows your approach
+2. **Explicitly reference key docs** - "Read foundation.md, README, commit history FIRST"
+3. **State what you DON'T want** - "Don't teach me PostgreSQL, help me use tools that abstract it"
+4. **Check understanding before proceeding** - "Do you understand my visual-first, AI-assisted approach?"
+
+**Created:** `docs/learning-resources/chat-templates/14-claude-code-context-primer.md` to prevent this in future sessions. Copy-paste this template at the start of EVERY Claude Code chat to save 30+ minutes of context correction.
 
 **One decision:** Removed the short placeholder story from seed data when it failed validation. Could have changed the constraint, but the 100-character minimum exists for a reason: transformation narratives need space to breathe. The constraint is protecting the product vision. Don't break it for convenience.
 
