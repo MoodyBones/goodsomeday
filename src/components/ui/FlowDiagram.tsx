@@ -14,7 +14,7 @@ export function FlowDiagram({ steps, vertical = false, className = '' }: FlowDia
           <React.Fragment key={index}>
             <div className="font-mono text-base md:text-lg">{step}</div>
             {index < steps.length - 1 && (
-              <div className="text-[#F9D762] text-2xl pl-4">↓</div>
+              <div className="text-[#F9D762] text-2xl pl-4" aria-hidden="true">↓</div>
             )}
           </React.Fragment>
         ))}
@@ -28,7 +28,7 @@ export function FlowDiagram({ steps, vertical = false, className = '' }: FlowDia
         <React.Fragment key={index}>
           <div className="font-mono text-base md:text-lg whitespace-nowrap">{step}</div>
           {index < steps.length - 1 && (
-            <div className="text-[#F9D762] text-2xl">→</div>
+            <div className="text-[#F9D762] text-2xl" aria-hidden="true">→</div>
           )}
         </React.Fragment>
       ))}

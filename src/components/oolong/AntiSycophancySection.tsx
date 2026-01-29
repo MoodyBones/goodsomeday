@@ -10,7 +10,7 @@ export function AntiSycophancySection() {
         
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div className="border-2 border-[#e5e5e5] rounded-lg p-6 opacity-60 relative">
-            <div className="absolute top-4 right-4 text-2xl text-red-600">✗</div>
+            <div className="absolute top-4 right-4 text-2xl text-red-600" aria-label="Not recommended">✗</div>
             <div className="text-sm font-medium text-[#666666] mb-3">The LinkedIn Version</div>
             <p className="text-base italic text-[#666666]">
               I&apos;m thrilled to announce my transition into Product Management! 

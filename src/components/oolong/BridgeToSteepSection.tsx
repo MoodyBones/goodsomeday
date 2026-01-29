@@ -38,9 +38,14 @@ export function BridgeToSteepSection() {
         </div>
 
         <div className="flex justify-center">
-          <Button variant="primary" href="https://curate-company-content.netlify.app" className="text-lg">
+          <a 
+            href="https://curate-company-content.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-offset-2 min-h-[44px] bg-[#F9D762] text-black hover:bg-[#f0ce52] focus:ring-[#F9D762]/50 text-lg"
+          >
             Turn Your Story Into a Profile
-          </Button>
+          </a>
         </div>
       </div>
     </section>

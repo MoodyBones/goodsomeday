@@ -16,7 +16,12 @@ export function FinalCTASection() {
         </div>
 
         <div className="text-center mb-6">
-          <a href="https://curate-company-content.netlify.app" className="text-lg underline hover:text-[#666666]">
+          <a 
+            href="https://curate-company-content.netlify.app" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg underline hover:text-[#666666]"
+          >
             Already have stories? Build your Steep profile →
           </a>
         </div>

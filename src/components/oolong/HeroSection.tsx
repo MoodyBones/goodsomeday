@@ -18,17 +18,17 @@ export function HeroSection() {
           <div className="text-center opacity-40">
             <div className="text-sm mb-2 text-[#666666]">Traditional career path</div>
             <div className="relative">
-              <svg width="200" height="60" viewBox="0 0 200 60" className="mx-auto">
+              <svg width="200" height="60" viewBox="0 0 200 60" className="mx-auto" role="img" aria-label="Traditional linear career path - not applicable">
                 <line x1="10" y1="30" x2="190" y2="30" stroke="black" strokeWidth="3"/>
                 <polygon points="190,30 180,25 180,35" fill="black"/>
               </svg>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-red-600">✗</div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-red-600" aria-label="rejected">✗</div>
             </div>
           </div>
           
           <div className="text-center">
             <div className="text-sm mb-2 font-medium">Actual path</div>
-            <svg width="200" height="100" viewBox="0 0 200 100" className="mx-auto">
+            <svg width="200" height="100" viewBox="0 0 200 100" className="mx-auto" role="img" aria-label="Non-linear career path with multiple transitions and pivots">
               <path 
                 d="M 10 50 L 50 30 L 90 60 L 130 40 L 170 70 L 190 50" 
                 stroke="#F9D762" 

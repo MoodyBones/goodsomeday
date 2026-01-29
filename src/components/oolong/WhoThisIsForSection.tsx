@@ -10,27 +10,27 @@ export function WhoThisIsForSection() {
         
         <div className="space-y-3 text-lg mb-8">
           <div className="flex items-start gap-3">
-            <span className="text-[#F9D762] text-xl mt-1">✓</span>
+            <span className="text-[#F9D762] text-xl mt-1" aria-hidden="true">✓</span>
             <p>Switched industries and can&apos;t explain it in 30 seconds</p>
           </div>
           <div className="flex items-start gap-3">
-            <span className="text-[#F9D762] text-xl mt-1">✓</span>
+            <span className="text-[#F9D762] text-xl mt-1" aria-hidden="true">✓</span>
             <p>Left jobs due to burnout, discrimination, or toxic culture</p>
           </div>
           <div className="flex items-start gap-3">
-            <span className="text-[#F9D762] text-xl mt-1">✓</span>
+            <span className="text-[#F9D762] text-xl mt-1" aria-hidden="true">✓</span>
             <p>Have gaps from caregiving, health issues, or just figuring it out</p>
           </div>
           <div className="flex items-start gap-3">
-            <span className="text-[#F9D762] text-xl mt-1">✓</span>
+            <span className="text-[#F9D762] text-xl mt-1" aria-hidden="true">✓</span>
             <p>Built skills outside traditional employment</p>
           </div>
           <div className="flex items-start gap-3">
-            <span className="text-[#F9D762] text-xl mt-1">✓</span>
+            <span className="text-[#F9D762] text-xl mt-1" aria-hidden="true">✓</span>
             <p>Work better in specific environments (remote, direct communication, flat hierarchies)</p>
           </div>
           <div className="flex items-start gap-3">
-            <span className="text-[#F9D762] text-xl mt-1">✓</span>
+            <span className="text-[#F9D762] text-xl mt-1" aria-hidden="true">✓</span>
             <p>Tired of performing enthusiasm you don&apos;t feel</p>
           </div>
         </div>
