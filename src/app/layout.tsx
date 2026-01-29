@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Goodsomeday - Your career story matters",
-  description: "A platform for sharing career journey stories at every stage",
+  title: "Oolong - Clinical archive of career barriers and transformations",
+  description: "Document what happened. Turn barriers into evidence. Build a profile that matches how you actually work.",
 };
 
 export default function RootLayout({
