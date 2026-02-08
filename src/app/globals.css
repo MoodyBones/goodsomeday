@@ -1,69 +1,116 @@
 @import "tailwindcss";
 
-@theme {
-  /* Oolong Colors */
-  --color-primary: #000000;
-  --color-secondary: #f9d762;  /* Golden Yellow */
-  --color-background: #ffffff;
-  --color-surface: #f5f5f5;
-  --color-text-primary: #000000;
-  --color-text-secondary: #4d4d4d;
-  --color-border: #e5e5e5;  /* Light Grey for dividers */
-  --color-accent: #f9d762;  /* Golden Yellow accent */
+@custom-variant dark (&:is(.dark *));
 
-  /* Dark mode colors */
-  --color-dark-background: #121212;
-  --color-dark-surface: #1e1e1e;
-  --color-dark-text-primary: #ffffff;
-  --color-dark-text-secondary: #b0b0b0;
-  --color-dark-border: #333333;
-
-  /* Spacing (8px base) */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 48px;
-
-  /* Font sizes */
-  --font-size-hero: 72px;
-  --font-size-section: 48px;
-  --font-size-sub: 28px;
-  --font-size-heading: 18px;
-  --font-size-body: 16px;
-  --font-size-caption: 14px;
-
-  /* Specific heights from design */
-  --height-header: 80px;
-  --height-footer: 120px;
-  --height-search: 56px;
-  --height-hero-button: 80px;
-
-  /* Widths */
-  --width-sidebar: 240px;
-  --width-content-max: 840px;
-  --width-page-max: 1200px;
-
-  /* Border radius */
-  --radius-card: 12px;
-  --radius-badge: 16px;
-  --radius-button: 12px;
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Base styles */
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: var(--font-size-body);
-  line-height: 1.5;
-  color: var(--color-text-primary);
-  background-color: var(--color-background);
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-golden: var(--golden);
+  --color-golden-foreground: var(--golden-foreground);
+  --color-surface: var(--surface);
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
+:root {
+  --radius: 0.75rem;
+
+  /* Core palette */
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+
+  /* Primary = black */
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+
+  /* Secondary = light grey surface */
+  --secondary: #f5f5f5;
+  --secondary-foreground: #000000;
+
+  /* Muted */
+  --muted: #f5f5f5;
+  --muted-foreground: #4d4d4d;
+
+  /* Accent = golden yellow */
+  --accent: #f9d762;
+  --accent-foreground: #000000;
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #f9d762;
+
+  /* Oolong golden yellow */
+  --golden: #f9d762;
+  --golden-foreground: #000000;
+  --surface: #f5f5f5;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #ffffff;
+  --card: #1e1e1e;
+  --card-foreground: #ffffff;
+  --popover: #1e1e1e;
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #121212;
+  --secondary: #1e1e1e;
+  --secondary-foreground: #ffffff;
+  --muted: #1e1e1e;
+  --muted-foreground: #b0b0b0;
+  --accent: #f9d762;
+  --accent-foreground: #000000;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #333333;
+  --input: #333333;
+  --ring: #f9d762;
+  --golden: #f9d762;
+  --golden-foreground: #000000;
+  --surface: #1e1e1e;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
   body {
-    background-color: var(--color-dark-background);
-    color: var(--color-dark-text-primary);
+    @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
   }
 }
