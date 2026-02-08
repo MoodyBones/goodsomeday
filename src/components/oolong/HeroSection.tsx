@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '../ui/Button';
 
 export function HeroSection() {
@@ -22,7 +21,12 @@ export function HeroSection() {
                 <line x1="10" y1="30" x2="190" y2="30" stroke="black" strokeWidth="3"/>
                 <polygon points="190,30 180,25 180,35" fill="black"/>
               </svg>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-red-600" aria-label="rejected">✗</div>
+              <div
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-red-600"
+                aria-hidden="true"
+              >
+                ✗
+              </div>
             </div>
           </div>
           

@@ -1,10 +1,8 @@
-import React from 'react';
-import { Button } from '../ui/Button';
 import { FlowDiagram } from '../ui/FlowDiagram';
 
 export function BridgeToSteepSection() {
   return (
-    <section className="py-16 md:py-24 px-6 bg-[#f5f5f5]">
+    <section className="py-16 md:py-24 px-6 bg-[#f5f5f5] dark:bg-slate-800">
       <div className="max-w-[800px] mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-8">
           Stories become portfolio evidence. Evidence becomes job matches.
@@ -26,10 +24,10 @@ export function BridgeToSteepSection() {
 
         <div className="mb-8 space-y-4 text-lg">
           <p>Your story isn&apos;t just therapy. It&apos;s data about:</p>
-          <ul className="ml-6 space-y-2">
-            <li>• What problems you solve</li>
-            <li>• What environments you need</li>
-            <li>• What you won&apos;t compromise on</li>
+          <ul className="ml-6 space-y-2 list-disc marker:text-black dark:marker:text-white">
+            <li>What problems you solve</li>
+            <li>What environments you need</li>
+            <li>What you won&apos;t compromise on</li>
           </ul>
           <p>
             Steep uses this to build a profile that strips the &quot;passionate team player&quot; 

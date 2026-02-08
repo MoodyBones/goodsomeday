@@ -1,8 +1,6 @@
-import React from 'react';
-
 export function WhoThisIsForSection() {
   return (
-    <section className="py-16 md:py-24 px-6 bg-[#f5f5f5]">
+    <section className="py-16 md:py-24 px-6 bg-[#f5f5f5] dark:bg-slate-800">
       <div className="max-w-[800px] mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-8">
           If your career doesn&apos;t fit the template, you&apos;re in the right place.

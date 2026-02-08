@@ -1,9 +1,8 @@
-import React from 'react';
 import { Card } from '../ui/Card';
 
 export function ProblemSection() {
   return (
-    <section className="py-16 md:py-24 px-6 bg-[#f5f5f5]">
+    <section className="py-16 md:py-24 px-6 bg-[#f5f5f5] dark:bg-slate-800">
       <div className="max-w-[800px] mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-8">
           The LinkedIn Persona doesn&apos;t work for non-linear careers.
@@ -11,11 +10,11 @@ export function ProblemSection() {
         
         <div className="mb-12">
           <p className="text-lg mb-4">The standard job application assumes you:</p>
-          <ul className="text-lg space-y-2 ml-6">
-            <li>• Stayed in one industry</li>
-            <li>• Moved up predictably</li>
-            <li>• Never left for mental health, caregiving, discrimination, burnout</li>
-            <li>• Can explain gaps without sounding &quot;difficult&quot;</li>
+          <ul className="text-lg space-y-2 ml-6 list-disc marker:text-black dark:marker:text-white">
+            <li>Stayed in one industry</li>
+            <li>Moved up predictably</li>
+            <li>Never left for mental health, caregiving, discrimination, burnout</li>
+            <li>Can explain gaps without sounding &quot;difficult&quot;</li>
           </ul>
           <p className="text-lg mt-6">
             But most careers don&apos;t work that way. Especially when systems fail you.

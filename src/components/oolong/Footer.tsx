@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function Footer() {
   return (
     <footer className="py-12 px-6 border-t-2 border-[#e5e5e5]">

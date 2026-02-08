@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '../ui/Button';
 
 export function FinalCTASection() {
@@ -28,8 +27,7 @@ export function FinalCTASection() {
 
         <p className="text-base text-[#666666] max-w-[600px] mx-auto">
           Stories are anonymous unless you choose otherwise. We aggregate patterns, 
-          not personal details. Your story might be exactly what someone else needs 
-          to see to know they&apos;re not alone in a systemic problem.
+          not personal details. Add your data point to document systemic career barriers.
         </p>
       </div>
     </section>
