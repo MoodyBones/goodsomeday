@@ -1,13 +1,23 @@
+import { HeroSection } from '@/components/oolong/HeroSection';
+import { ProblemSection } from '@/components/oolong/ProblemSection';
+import { WhatOolongDoesSection } from '@/components/oolong/WhatOolongDoesSection';
+import { BridgeToSteepSection } from '@/components/oolong/BridgeToSteepSection';
+import { AntiSycophancySection } from '@/components/oolong/AntiSycophancySection';
+import { WhoThisIsForSection } from '@/components/oolong/WhoThisIsForSection';
+import { FinalCTASection } from '@/components/oolong/FinalCTASection';
+import { Footer } from '@/components/oolong/Footer';
+
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <div className="flex items-center justify-center h-screen">
-        <div className="text-center">
-          <h1 className="text-[72px] font-bold mb-4">Goodsomeday</h1>
-          <p className="text-[28px] text-[#666666]">Your career story matters</p>
-          <div className="mt-8 w-16 h-16 bg-[#F9D762] rounded-full mx-auto"></div>
-        </div>
-      </div>
+      <HeroSection />
+      <ProblemSection />
+      <WhatOolongDoesSection />
+      <BridgeToSteepSection />
+      <AntiSycophancySection />
+      <WhoThisIsForSection />
+      <FinalCTASection />
+      <Footer />
     </main>
   );
 }

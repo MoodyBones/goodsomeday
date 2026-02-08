@@ -1,7 +1,7 @@
 {
-  "name": "goodsomeday",
+  "name": "oolong",
   "version": "1.0.0",
-  "description": "A platform for sharing career journey stories - built while learning **visual-first, AI-assisted full-stack development**.",
+  "description": "Clinical archive of career barriers and transformations - data collection that feeds Steep's job matching engine.",
   "main": "index.js",
   "directories": {
     "doc": "docs"
