@@ -3,15 +3,17 @@
 ## Project Overview
 
 - **Oolong** (Stories) - Public platform. Career stories told through the lens of barriers, reflections, actions, and transformations. "Spill the tea."
-- **Steep** (Engine) - Multi-agent matching engine. Extracts grounded value from project experience and finds high-integrity job matches. Formerly MelJonesAI.
+- **Steep** (Engine) - Multi-agent matching engine. Extracts grounded value from project experience and attempts to surface better-fit matches. Formerly MelJonesAI.
 
-**Objective:** Override the "Politeness Trap" (AI Sycophancy) to find grounded job matches.
+**Objective:** Override the Politeness Trap (see [glossary](glossary.md)) to attempt grounded matching.
+
+**Nature:** This is a public and social experiment.
 
 ## Strategic Pillars
 
-1. **Constitutional Override:** Hard-coded rules to kill "LinkedIn Fluff" and "Escape Hatches."
+1. **Constitutional Override:** Hard-coded rules against vague, performative language (see [glossary](glossary.md)).
 2. **The Mirror:** AI as a reflection of culture; we automate what we value (Directness vs. Visibility).
-3. **Socratic Audit:** Forcing the AI to explain its own "politeness bias" to break the mediocre loop.
+3. **Socratic Audit:** Forcing the AI to explain its own agreement bias (see [glossary](glossary.md)) to break the mediocre loop.
 4. **Terroir:** Leveraging lived experience in specific markets (e.g., 11 years Berlin/Amsterdam) as competitive advantage.
 
 ## Two-Agent Architecture
@@ -35,7 +37,7 @@ Takes "Brewing Material" from the Extraction Agent and applies the Grounded Cons
 **Override Rules:**
 
 - **Kill the Persona:** Delete all "passionate about," "excited to," "pleased to announce."
-- **Remove Escape Hatches:** Strip "I think," "perhaps," "just." Replace with observation-led verbs: "Engineered," "Mapped," "Audited."
+- **Remove Hedging:** Strip "I think," "perhaps," "just." Replace with observation-led verbs: "Engineered," "Mapped," "Audited."
 - **Grounded Logic:** If the result was a 20% increase in efficiency, state: "Result: 20% efficiency increase via [Specific Method]." No fluff.
 
 **Output Style:** Direct. Scientific. No-nonsense. Assume the work is so good it doesn't need to be loud.
@@ -55,7 +57,7 @@ Takes "Brewing Material" from the Extraction Agent and applies the Grounded Cons
 >
 > **2. The Two-Agent Workflow:**
 > - **Extraction Agent:** Prioritise depth and metric-driven truth. Interrogate project inputs to find the "Specialisation Focus" and "Key Metric Result".
-> - **Synthesis Agent:** Translate findings into a grounded profile. Strip away all performative politeness, hedging, and "LinkedIn Persona" fluff.
+> - **Synthesis Agent:** Translate findings into a grounded profile. Strip away performative language and hedging (softening statements to avoid commitment - words like "perhaps," "maybe," "just").
 >
 > **3. Modern Career Voice (Universal):**
 > - **Observation-Led:** Every claim tied to a project "Observation" or "Result".
@@ -84,5 +86,6 @@ Stories and profiles are categorised by career stage:
 
 - **Architecture:** Two-Agent Arc (Inquisitor → Architect)
 - **Data Source:** Sanity CMS Project Schema (Focus, Metrics, Friction)
-- **Mission:** Modern Careers Platform - "Spill the Tea" (Oolong) to get "Steeped Matches" (Steep)
-- **Core Protocol:** Anti-Sycophancy (Truth > Politeness). Grounded Constitution overrides all "LinkedIn Persona" defaults
+- **Mission:** Modern Careers Platform - "Spill the Tea" (Oolong) to attempt "Steeped Matches" (Steep)
+- **Core Protocol:** Anti-agreement-bias (Truth > Politeness). Grounded Constitution overrides performative language defaults
+- **Nature:** Public and social experiment
