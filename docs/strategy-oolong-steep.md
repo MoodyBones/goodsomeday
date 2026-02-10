@@ -5,7 +5,7 @@
 - **Oolong** (Stories) - Public platform. Career stories told through the lens of barriers, reflections, actions, and transformations. "Spill the tea."
 - **Steep** (Engine) - Multi-agent matching engine. Extracts grounded value from project experience and attempts to surface better-fit matches. Formerly MelJonesAI.
 
-**Objective:** Override the Politeness Trap (see [glossary](glossary.md)) to attempt grounded matching.
+**Objective:** Override the Politeness Trap (AI Sycophancy / agreement bias - see [glossary](glossary.md)) to attempt grounded matching.
 
 **Nature:** This is a public and social experiment.
 
