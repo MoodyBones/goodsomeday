@@ -1,189 +1,112 @@
 # Changelog
 
-All notable changes to the Goodsomeday project will be documented in this file.
+All notable changes to Oolong will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
 ## [Unreleased]
 
-### In Progress
-- GOO-12: Database schema design for stories and learning journal
-
 ### Planned
-- GOO-13: Build n8n workflow for story submission
-- GOO-14: Build n8n workflow for story retrieval
-- GOO-15: Create story submission form (frontend)
-- GOO-16: Create story feed display (frontend)
-- GOO-17: Admin moderation panel
-- GOO-18: Deploy MVP to production
+- Phase 2: Gemini API integration for Story Coach + Story Structurer
+- Phase 3: PostgreSQL submission storage
+- Push to Steep integration
+
+---
+
+## [0.6.0] - 2026-02-10
+
+### Added — Interactive Story Submission (Phase 1)
+- **Chat-style submit UI** (`/submit`) replacing the placeholder page
+  - 6-step forward-only flow: pipeline → barrier → reflection → action → transformation → review
+  - Mobile-first messaging interface (coach left, user right)
+  - Auto-growing textarea with Enter to send, Shift+Enter for newlines
+  - Help button with Socratic questioning during coached steps
+  - Progress dots tracking conversation stage
+  - Typing indicator animation during coach "thinking"
+- **Pipeline selection card** with career stage buttons + pronouns input
+- **Story review screen** with structured story display, consent checkbox, optional public toggle (reveals name + email fields)
+- **Mock coach** with canned motivational interviewing responses (800ms delay)
+- **Chat state machine** (`useReducer`) handling all conversation state page-locally
+- **New types:** `ChatStep`, `ChatState`, `ChatMessage`, `PipelineStage`, `StorySubmission`
+- **shadcn/ui components:** input, textarea, label, checkbox
+- **`pb-safe` CSS utility** for iPhone safe area bottom padding
+
+### Documentation
+- Updated `docs/prd-interactive-submit.md` to reflect anonymous-first design
+- PR #31: full architecture diagram, design decisions, and test plan
+
+---
+
+## [0.5.0] - 2026-01-29
+
+### Added — Oolong Landing Page
+- **Mirror Selector** — pick a career stage, see a matched story fragment
+- **Story cards** — browsable collection with barrier/reflection/action/transformation arcs
+- **Submit CTA** — links to `/submit` flow
+- **Design tokens** — golden `#F9D762`, surface `#f5f5f5`, black/white palette
+- **shadcn/ui setup** with Oolong design tokens (button, card variants)
+- **5 seed stories** covering student, early career, and mid-career pipeline stages
+
+### Documentation
+- Strategy reference (`docs/strategy-oolong-steep.md`)
+- Interactive submit PRD (`docs/prd-interactive-submit.md`)
+- Project glossary (`docs/glossary.md`)
+- Learning resources for GOO-6 and GOO-7
+
+### Changed
+- Rebranded from Goodsomeday to **Oolong**
+- Upgraded to Next.js 16, React 19, Tailwind CSS v4
 
 ---
 
 ## [0.3.0] - 2025-10-19
 
-### Added - Infrastructure Complete
-- **GOO-9:** VPS provisioning and security hardening
-  - Hostinger VPS setup (Ubuntu 22.04)
-  - Non-root user with sudo privileges
-  - SSH key authentication (password auth disabled)
-  - UFW firewall configuration (ports 22, 80, 443)
-  - Defense-in-depth security approach
-
-- **GOO-10:** n8n installation and configuration
-  - Node.js 20.x installation
-  - n8n global installation
-  - Nginx reverse proxy configuration
-  - SSL/TLS certificates (Let's Encrypt)
-  - PM2 process manager for n8n
-  - DNS configuration (n8n.goodsomeday.com)
-
-- **GOO-11:** PostgreSQL database setup
-  - PostgreSQL 16 installation
-  - goodsomeday_prod database creation
-  - goodsomeday_user with restricted permissions
-  - n8n database credential configuration
-  - Backup strategy documentation
+### Added — Infrastructure Complete
+- **VPS provisioning:** Hostinger Ubuntu 22.04, SSH key auth, UFW firewall
+- **n8n installation:** Visual workflow engine with Nginx reverse proxy and SSL
+- **PostgreSQL 16:** Database setup with restricted user permissions
+- **PM2 process management** for n8n
 
 ### Documentation
-- `docs/BACKUP-STRATEGY.md` - Database backup procedures
-- `docs/updates/update-004-goo-10.md` - n8n setup reflection
-- `docs/updates/update-005-goo-11.md` - PostgreSQL setup reflection
-- `docs/learning-resources/questions/GOO-9-vps-security.md` - Active recall questions
-- `docs/learning-resources/questions/GOO-10-n8n-setup.md` - Active recall questions
-- `docs/learning-resources/questions/GOO-11-postgresql-setup.md` - Active recall questions
-
-### Infrastructure
-- VPS: Hostinger Ubuntu 22.04
-- Backend: n8n (workflow automation)
-- Database: PostgreSQL 16
-- Reverse Proxy: Nginx with SSL
-- Process Manager: PM2
+- Backup strategy, n8n setup reflection, PostgreSQL setup reflection
+- Active recall questions for GOO-9, GOO-10, GOO-11
 
 ---
 
 ## [0.2.0] - 2025-10-17
 
-### Added - Project Foundation
-- **GOO-6:** Project initialization
-  - Next.js 14 setup with TypeScript
-  - Tailwind CSS configuration
-  - Basic project structure
-  - Git repository initialization
-
-- **GOO-7:** Core documentation
-  - README.md with project overview
-  - Learning resources structure
-  - Foundation.md with all 20 tickets defined
-  - Chat templates for AI assistance
-
-- **GOO-8:** Development workflow setup
-  - Git branching strategy
-  - Linear integration
-  - Learning journal template
-  - Active recall question format
-
-### Documentation
-- `docs/learning-resources/foundation.md` - Complete project plan
-- `docs/learning-resources/chat-templates/` - AI assistance templates
-- `docs/learning-resources/chat-selection-guide.md` - When to use which template
-- `README.md` - Project overview and philosophy
+### Added — Project Foundation
+- **Next.js 14 setup** with TypeScript and Tailwind CSS
+- **Project structure:** components, hooks, lib, types, contexts
+- **Core documentation:** README, learning resources, foundation doc
+- **Development workflow:** Git branching, Linear integration, learning journal
 
 ---
 
 ## [0.1.0] - 2025-10-10
 
-### Added - Initial Concept
-- Project conception: Career transformation story platform
+### Added — Initial Concept
+- Project conception: career transformation story platform
 - Inspired by Australia's Leaky Pipeline Report
-- Core vision: Reframing tool, not just story platform
-- Transformation narrative arc defined: barrier → reflection → action → growth
-- Visual-first, AI-assisted development approach chosen
-
-### Philosophy
-- Stories must demonstrate agency, not just trauma
-- Both "stayed in tech" and "left tech" are valid outcomes
-- Action is required element of every story
-- Guided freeform storytelling (not rigid forms)
+- Transformation narrative arc: barrier → reflection → action → transformation
+- Visual-first, AI-assisted development approach
 
 ---
 
-## Version History Summary
+## Version Summary
 
-- **v0.3.0** - Infrastructure complete (VPS, n8n, PostgreSQL)
-- **v0.2.0** - Project foundation and documentation
-- **v0.1.0** - Initial concept and vision
-
----
-
-## Learning Journey
-
-Each major ticket includes:
-- **Update** - Personal reflection on what was learned
-- **Active Recall Questions** - For spaced repetition learning
-- **LinkedIn Post** - Public-facing learning share (some tickets)
-
-See `docs/updates/` and `docs/learning-resources/questions/` for detailed learning documentation.
+| Version | Date | Milestone |
+|---------|------|-----------|
+| 0.6.0 | 2026-02-10 | Interactive submit UI (Phase 1 — mock coach) |
+| 0.5.0 | 2026-01-29 | Oolong landing page + rebrand |
+| 0.3.0 | 2025-10-19 | Infrastructure (VPS, n8n, PostgreSQL) |
+| 0.2.0 | 2025-10-17 | Project foundation |
+| 0.1.0 | 2025-10-10 | Initial concept |
 
 ---
 
-## Upcoming Milestones
-
-### Milestone 2: Backend Workflows (In Progress)
-- [ ] GOO-12: Database schema design
-- [ ] GOO-13: Story submission workflow
-- [ ] GOO-14: Story retrieval workflow
-- [ ] GOO-15: Admin moderation workflow
-
-### Milestone 3: Frontend UI
-- [ ] GOO-16: Story submission form
-- [ ] GOO-17: Story feed display
-- [ ] GOO-18: Theme system implementation
-- [ ] GOO-19: Accessibility audit
-
-### Milestone 4: MVP Launch
-- [ ] GOO-20: End-to-end testing
-- [ ] GOO-21: Production deployment
-- [ ] GOO-22: Monitoring setup
-- [ ] GOO-23: Public launch
-
----
-
-## Breaking Changes
-
-None yet (pre-release)
-
----
-
-## Migration Notes
-
-### v0.3.0 → v0.4.0 (Upcoming)
-- Database schema will be finalized (GOO-12)
-- Breaking change: Story structure may change based on final schema design
-- Migration script will be provided if needed
-
----
-
-## Contributors
-
-**Mel Jones** ([@MoodyBones](https://github.com/MoodyBones))
-- Visual learner • Frontend developer • Accessibility advocate
-- Building in public with visual-first, AI-assisted approach
-
----
-
-## Acknowledgments
-
-- **Australia's Leaky Pipeline Report** - Inspiration for the project
-- **n8n Community** - Visual workflow automation inspiration
-- **Anthropic (Claude Code)** - AI-assisted development tools
-- **Josh Comeau** - Dark mode implementation patterns
-- **Linear** - Project management with learning documentation
-
----
-
-**Last Updated:** 19 October 2025
-**Current Version:** 0.3.0 (Infrastructure Complete)
-**Next Version:** 0.4.0 (Database Schema Complete - In Progress)
+**Last Updated:** 10 February 2026
+**Current Version:** 0.6.0 (Interactive Submit — Phase 1)
+**Next:** Phase 2 (Gemini integration)

@@ -1,309 +1,187 @@
-# Goodsomeday
+# Oolong
 
-A platform for sharing career journey stories - built while learning **visual-first, AI-assisted full-stack development**.
+Clinical archive of career barriers and transformations. Data collection that feeds [Steep's](https://github.com/MoodyBones/meljonesai) job matching engine.
 
-> **📚 This is a learning project.** I'm a visual learner and frontend developer exploring modern tools (n8n, Claude Code, Figma MCP) that let me build complete products without losing my soul to traditional backend development.
+"Spill the tea."
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://goodsomeday.vercel.app) 
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://goodsomeday.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
 
-## 🎯 What is Goodsomeday?
+## What is this?
 
-Goodsomeday is a platform for sharing transformative career journey stories - moments when people faced barriers in tech, reflected on their experiences, and took action that led to meaningful change.
+Oolong collects real career stories — not inspiration, pattern recognition. Each story follows a four-stage arc:
 
-**Inspired by:** Australia's recent [Leaky Pipeline Report](https://www.vic.gov.au/leaky-tech-pipeline-report) showing where we lose women in tech careers.
+1. **Barrier** — What happened. The wall you hit.
+2. **Reflection** — What you noticed. How your thinking shifted.
+3. **Action** — What you did about it.
+4. **Transformation** — What changed.
 
-### The Story Format: From Barrier to Action
+Stories are categorised by pipeline stage: **Student**, **Early Career** (0–5 yrs), **Mid-Career** (5+ yrs). Anonymous by default. Identity only collected if you opt to make your story public.
 
-Stories on Goodsomeday follow a narrative arc designed to move from victimhood to empowerment:
-
-1. **What happened** - The negative experience or barrier (burnout, discrimination, imposter syndrome, lack of support)
-2. **Reflection** - How it made them think, what they realized about themselves or the system
-3. **Action** - What they did about it (changed environments, set boundaries, found community, left tech, advocated for change)
-4. **Transformation** - How they've grown and what changed as a result
-
-**Stories are categorized by when they left (or almost left) the pipeline:**
-- **Student** - Barriers during education (high school, university)
-- **Early Career** - First 0-5 years in the industry
-- **Mid-Career** - 5+ years, experienced professionals
-
-**The goal:** Help others see that hope comes from action and change. Whether someone stayed in tech with new boundaries, found fulfillment elsewhere, or is still figuring it out - every story shows a path forward.
-
-The platform focuses on authentic, structured storytelling with an emphasis on accessibility and inclusive design.
+**Inspired by:** Australia's [Leaky Pipeline Report](https://www.vic.gov.au/leaky-tech-pipeline-report) — where we lose women in tech careers.
 
 ---
 
-## 🚀 Tech Stack
+## Current state
 
-**Frontend** *(My Comfort Zone)*
-- [Next.js 14](https://nextjs.org/) - React framework with App Router
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first styling
-- [Lucide React](https://lucide.dev/) - Icons
-- Focus: Beautiful, accessible interfaces for ALL users
+### Landing page (`/`) — shipped
+- Mirror Selector: pick a career stage, see a matched story fragment
+- Story browse: all stories with barrier/reflection/action/transformation arcs
+- CTA to submit flow
 
-**Backend** *(Visual & AI-Assisted)*
-- [n8n](https://n8n.io/) - Visual workflow automation (no Express.js!)
-- [PostgreSQL](https://www.postgresql.org/) - Database (accessed via n8n nodes)
-- Visual drag-and-drop logic instead of hand-coded APIs
+### Interactive submit (`/submit`) — Phase 1 complete
+Chat-style story submission. A Story Coach guides you through telling your career story using motivational interviewing (OARS). Mobile-first, looks like a messaging app.
 
-**Infrastructure**
-- [Hostinger](https://www.hostinger.com/) - VPS hosting
-- [Nginx](https://nginx.org/) - Reverse proxy
+| Step | What happens |
+|------|-------------|
+| Pipeline + Pronouns | Select career stage, enter pronouns |
+| Barrier | Coach prompts, you write, coach reflects back |
+| Reflection | Same pattern |
+| Action | Same pattern |
+| Transformation | Same pattern |
+| Review | Structured story displayed, consent checkbox, optional public toggle |
 
-**AI & Automation**
-- [Claude Code](https://docs.anthropic.com/claude/docs/claude-code) - AI-assisted component generation
-- [Claude API](https://www.anthropic.com/) - Automated release notes
-- [Figma MCP](https://www.figma.com/) - Design-to-code integration (future goal)
+Currently running with mock responses (canned, 800ms delay). Gemini integration is Phase 2.
 
-**Tools & Workflow**
-- [Linear](https://linear.app/) - Project management with learning documentation
-- [Figma](https://figma.com/) - Design system and component library
-- [GitHub](https://github.com/) - Version control with PR workflow
+**Key details:**
+- Forward-only flow (no going back)
+- Help button during coached steps (Socratic questioning)
+- `useReducer` state machine — all state is page-local
+- Anonymous by default — name/email only collected if user toggles "make public"
 
----
-
-## 📖 Learning Journey
-
-**This project exists to answer a question:** Can a visual learner who loves frontend development build complete products using modern AI and no-code tools - without becoming a traditional backend developer?
-
-### The Approach
-
-I'm not learning "full-stack" the traditional way. I'm learning **visual-first, AI-assisted full-stack**:
-
-**What I'm Using:**
-- 🎨 **n8n** for backend logic (drag-and-drop workflows, not Express.js)
-- 🤖 **Claude Code** for component generation (review, don't write from scratch)
-- 📐 **Figma MCP** for design-to-code (the real end goal)
-
-**What I'm NOT Doing:**
-- ❌ Hand-coding CRUD APIs
-- ❌ Writing raw SQL queries
-- ❌ Becoming a database optimization expert
-- ❌ Spending months on traditional backend learning
-
-**What I AM Doing:**
-- ✅ Using visual tools that match how I think
-- ✅ Letting AI handle boilerplate I don't want to write
-- ✅ Focusing on beautiful, accessible frontends
-- ✅ Building toward design system automation
-- ✅ Shipping a product that helps people
-
-### Why This Matters
-
-**I care about:**
-- Beautiful, accessible interfaces
-- Equality and fair work in tech  
-- Design systems and collaboration
-- Making technology approachable for everyone
-
-**I don't care about:**
-- Writing server boilerplate manually
-- SQL optimization minutiae
-- Pretending to love what I don't
-
-The future isn't "everyone becomes a traditional full-stack developer." It's "use modern tools to build on your unique strengths."
-
-### Skills I'm Developing
-
-**Technical:**
-- Visual workflow design (n8n)
-- AI-assisted development (Claude Code)
-- Backend concepts (without drowning in syntax)
-- Design-to-code integration (Figma MCP)
-- Infrastructure basics (just enough to be dangerous)
-
-**Professional:**
-- Building in public
-- Systematic learning documentation
-- Git workflow best practices
-- Strategic tool selection
-- Learning efficiency over mastery
-
-**Track My Progress:**
-- [Changelog](docs/CHANGELOG.md) - What's been built
-- [Learning Resources](docs/learning-resources/) - What I learned building each feature
-- [Architecture](docs/ARCHITECTURE.md) - How it all fits together
+### Not yet built
+- **Phase 2:** Gemini API integration (Story Coach + Story Structurer agents)
+- **Phase 3:** PostgreSQL submission storage
+- Push to Steep integration
+- User auth
+- Story moderation
 
 ---
 
-## ✨ Features
+## Tech stack
 
-**Current (MVP):**
-- ✅ Story submission with visual validation (n8n workflow)
-- ✅ Story feed with filtering by pipeline stage
-- ✅ Light/dark theme system (accessible color contrast)
-- ✅ Admin moderation panel
-- ✅ Automated release notes (Claude API)
-
-**In Progress:**
-- 🔄 Visual backend workflows (replacing traditional API code)
-- 🔄 AI-generated components (Claude Code + Figma specs)
-- 🔄 Accessibility-first design system
-
-**Planned (v2.0+):**
-- 📋 Figma MCP integration (design → code automation)
-- 📋 Design system documentation generator
-- 📋 Comments on stories
-- 📋 User authentication
-- 📋 Story reactions/likes
-- 📋 Search functionality
+| Layer | Tool |
+|-------|------|
+| Framework | [Next.js 16](https://nextjs.org/) (App Router, React 19) |
+| Language | [TypeScript](https://www.typescriptlang.org/) (strict) |
+| Styling | [Tailwind CSS v4](https://tailwindcss.com/) |
+| Components | [shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/) |
+| Icons | [Lucide React](https://lucide.dev/) |
+| AI (planned) | [Gemini API](https://ai.google.dev/) (REST, no SDK) |
+| Hosting | [Vercel](https://vercel.com/) |
 
 ---
 
-## 🛠️ Project Setup
+## Project structure
 
-### Prerequisites
+```
+src/
+├── app/
+│   ├── layout.tsx              # Root layout
+│   ├── globals.css             # Design tokens + Tailwind theme
+│   ├── page.tsx                # Landing page
+│   └── submit/
+│       └── page.tsx            # Interactive submit (ChatShell)
+├── components/
+│   ├── ui/                     # shadcn primitives (button, card, input, etc.)
+│   └── features/
+│       ├── MirrorSelector.tsx  # Stage picker on landing page
+│       ├── StoryCard.tsx       # Story display card
+│       ├── StoryFragment.tsx   # Single stage fragment
+│       └── submit/             # Chat submission components
+│           ├── ChatShell.tsx   # Main orchestrator (owns useReducer)
+│           ├── ChatBubble.tsx  # Coach/user message bubbles
+│           ├── ChatInput.tsx   # Auto-growing textarea + send
+│           ├── ChatMessageList.tsx
+│           ├── PipelineSelect.tsx
+│           ├── StoryReview.tsx
+│           ├── StageProgress.tsx
+│           ├── HelpButton.tsx
+│           └── TypingIndicator.tsx
+├── hooks/
+│   └── use-chat-reducer.ts    # Chat state machine
+├── lib/
+│   ├── utils.ts               # cn() helper
+│   └── mock-coach.ts          # Canned responses for Phase 1
+├── types/
+│   ├── story.ts               # StoryStage, Story, StorySubmission
+│   └── chat.ts                # ChatStep, ChatState, ChatMessage
+└── data/
+    └── stories.ts             # Seed stories
+```
 
-- Node.js 20.x or higher
-- npm or yarn
-- VPS with Ubuntu 22.04 (for backend)
-- PostgreSQL 14+
-- Domain name (optional, for SSL)
+---
 
-### Local Development
+## Local development
 
 ```bash
-# Clone the repository
 git clone https://github.com/MoodyBones/goodsomeday.git
 cd goodsomeday
-
-# Install dependencies
 npm install
-
-# Set up environment variables
-cp .env.example .env.local
-# Edit .env.local with your values
-
-# Run development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see the app.
-
-### Environment Variables
-
-```bash
-# .env.local
-NEXT_PUBLIC_API_URL=https://your-n8n-instance.com/webhook
-```
-
-For detailed setup instructions including VPS, database, and n8n configuration, see [docs/SETUP.md](docs/SETUP.md).
+Open [http://localhost:3000](http://localhost:3000). Navigate to `/submit` to test the interactive flow.
 
 ---
 
-## 📁 Project Structure
+## Design tokens
 
-```
-goodsomeday/
-├── src/
-│   ├── app/                 # Next.js app directory
-│   │   ├── page.tsx        # Home page
-│   │   ├── admin/          # Admin routes
-│   │   └── changelog/      # Changelog page
-│   ├── components/
-│   │   ├── ui/             # Reusable UI components
-│   │   └── features/       # Feature-specific components
-│   ├── contexts/           # React contexts (theme, etc.)
-│   ├── hooks/              # Custom React hooks
-│   ├── lib/                # Utilities and API client
-│   └── types/              # TypeScript type definitions
-├── docs/
-│   ├── api/                # API documentation
-│   ├── learning-resources/ # Learning documentation
-│   └── ARCHITECTURE.md     # System architecture
-└── public/                 # Static assets
-```
+Defined in `src/app/globals.css` using Tailwind v4 `@theme inline`:
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--golden` | `#F9D762` | Accent, user chat bubbles, CTAs |
+| `--surface` | `#f5f5f5` | Coach chat bubbles, section backgrounds |
+| `--primary` | `#000000` | Text, buttons |
+| `--muted-foreground` | `#4d4d4d` | Secondary text |
 
 ---
 
-## 🔗 API Documentation
+## Architecture: Two-Agent Arc
 
-The backend is built with n8n workflows hosted on a VPS. Main endpoints:
+Adapted from [Steep's two-agent pattern](https://github.com/MoodyBones/meljonesai/tree/main/.gemini).
 
-- `POST /webhook/submit-story` - Submit a new story
-- `GET /webhook/get-stories` - Retrieve approved stories
-- `POST /webhook/learning-journal` - Record learning data (internal)
+**Agent 1 — Story Coach (The Inquisitor):** Real-time conversational agent. Guides users through 4 story stages using motivational interviewing (OARS). Listens, acknowledges, reflects back. Doesn't lecture.
 
-Full API documentation: [docs/api/README.md](docs/api/README.md)
+**Agent 2 — Story Structurer (The Architect):** Post-submission agent. Takes raw responses and structures them into clean Barrier/Reflection/Action/Transformation format. Applies the Grounded Constitution: direct, preserves voice, no additions.
 
----
-
-## 🚢 Deployment
-
-**Frontend:** Deployed on [Vercel](https://vercel.com/)
-**Backend:** Self-hosted on Hostinger VPS
-
-See [docs/SETUP.md](docs/SETUP.md) for complete deployment instructions.
+See [`docs/prd-interactive-submit.md`](docs/prd-interactive-submit.md) for the full spec and [`docs/strategy-oolong-steep.md`](docs/strategy-oolong-steep.md) for how Oolong feeds into Steep.
 
 ---
 
-## 🤝 Contributing
+## Docs
 
-This is primarily a learning project, but feedback and suggestions are welcome!
+| Document | What it covers |
+|----------|---------------|
+| [`docs/prd-interactive-submit.md`](docs/prd-interactive-submit.md) | Full PRD for the chat submission flow |
+| [`docs/strategy-oolong-steep.md`](docs/strategy-oolong-steep.md) | How Oolong + Steep work together |
+| [`docs/glossary.md`](docs/glossary.md) | Project terminology in plain language |
+| [`docs/CHANGELOG.md`](docs/CHANGELOG.md) | Version history |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | System architecture |
+| [`docs/learning-resources/`](docs/learning-resources/) | Active recall questions, learning journal |
+| [`docs/updates/`](docs/updates/) | Session reflections and progress updates |
+
+---
+
+## Contributing
+
+This is a learning project built in public. Feedback welcome.
 
 1. Check existing issues or create a new one
-2. Fork the repository
-3. Create a feature branch (`git checkout -b feature/amazing-feature`)
-4. Commit your changes (`git commit -m 'Add amazing feature'`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
-
-See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for more details.
+2. Fork the repo
+3. Create a feature branch (`git checkout -b feature/your-feature`)
+4. Commit with conventional commits (`feat:`, `fix:`, `docs:`)
+5. Open a Pull Request
 
 ---
 
-## 📝 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **Australia's Leaky Pipeline Report** - The inspiration for this project
-- **Josh Comeau** - Dark mode implementation patterns
-- **n8n Community** - Visual workflow automation inspiration
-- **Anthropic** - Claude Code and API for AI-assisted development
-- **Linear** - Amazing project management tool
-- **The Visual Learning Community** - For showing there are many paths to building
+MIT — see [LICENSE](LICENSE).
 
 ---
 
-## 📧 Contact
-
-**Mel Jones** (MoodyBones)  
-Visual learner • Frontend developer • Accessibility advocate
-
-- GitHub: [@MoodyBones](https://github.com/MoodyBones)
-- Project: [goodsomeday](https://github.com/MoodyBones/goodsomeday)
-- LinkedIn: [Connect with me](https://www.linkedin.com/in/mel-jones-4a5835182/)
-- Substack: [@m00dy](https://substack.com/@m00dy)
-
----
-
-## 🌟 Building a Different Way
-
-I'm building this project in public and documenting a non-traditional path to full-stack development.
-
-**If you're:**
-- A visual learner
-- Frontend-focused but need backend capabilities
-- Interested in AI-assisted development
-- Exploring n8n or Figma MCP
-- Building on your unique strengths
-
-**Follow along!**
-
-- ⭐ Star this repo to follow the journey
-- 📖 Read the [learning docs](docs/learning-resources/)
-- 💬 Ask questions in Issues
-- 🐦 Follow updates on [LinkedIn/Substack]
-
-**Let's build the future where tools adapt to humans, not the other way around.** 🚀
-
----
-
-Built with ❤️, visual thinking, and AI assistance by [MoodyBones](https://github.com/MoodyBones)
+**Mel Jones** ([@MoodyBones](https://github.com/MoodyBones)) — Melbourne, Australia
