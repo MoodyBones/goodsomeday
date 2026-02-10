@@ -12,3 +12,12 @@ export interface Story {
   title: string
   stages: Record<StoryStage, string>
 }
+
+export interface StorySubmission {
+  stages: Record<StoryStage, string>
+  pipelineStage: "student" | "early-career" | "mid-career"
+  pronouns: string
+  isPublic: boolean
+  identity: { name: string; email: string } | null
+  submittedAt: number
+}
