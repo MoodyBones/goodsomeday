@@ -114,3 +114,10 @@
     line-height: 1.5;
   }
 }
+
+/* iPhone safe area bottom padding */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
